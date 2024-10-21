@@ -13,7 +13,7 @@ def getImagesFromS3(request):
             if key.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
                 image_url = f'https://{bucket_name}.s3.amazonaws.com/{key}'
                 images.append(image_url)
-    return render(request, 's3images/list.html', {'images': images})
+    return render(request, 'S3images/list.html', {'images': images})
 
 
 
