@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3 Image Gallery</title>
+</head>
+<body>
+    <h1>S3 Image Gallery</h1>
+    <div>
+        {% if images %}
+            {% for image in images %}
+                <div>
+                    <img src="{{ image }}" alt="S3 Image" style="width: 200px; height: auto;">
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No images found in the S3 bucket.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
